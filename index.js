@@ -18,7 +18,7 @@ const BadRequestError = require('./errors/bad-request');
 const NotFoundError = require('./errors/not-found-err');
 const handleErrors = require('./middlewares/handleErrors');
 
-const { PORT = 3000, DB_URL } = process.env;
+const { PORT = 3000, DB_URL = 'mongodb://localhost:27017/bitfilmsdb' } = process.env;
 
 const auth = require('./middlewares/auth');
 

@@ -5,4 +5,4 @@ class Conflict extends Error {
   }
 }
 
-module.exports = Conflict
+module.exports = Conflict;

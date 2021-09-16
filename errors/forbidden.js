@@ -5,4 +5,4 @@ class Forbidden extends Error {
   }
 }
 
-module.exports = Forbidden
+module.exports = Forbidden;
