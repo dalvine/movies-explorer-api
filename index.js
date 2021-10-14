@@ -35,11 +35,11 @@ mongoose.connect(DB_URL, {
 });
 
 app.use(requestLogger);
-app.use(limiter);
-app.use(helmet());
 app.use(cors({
   origin: '*',
 }));
+app.use(limiter);
+app.use(helmet());
 
 app.use(require('./routes/sign'));
 
