@@ -36,7 +36,7 @@ mongoose.connect(DB_URL, {
 
 app.use(requestLogger);
 app.use(cors({
-  origin: '*',
+  origin: 'https://film-curator.nomoredomains.club/sign-up',
 }));
 app.use(limiter);
 app.use(helmet());
