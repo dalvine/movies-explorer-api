@@ -20,6 +20,11 @@ const handleErrors = require('./middlewares/handleErrors');
 
 const { PORT = 3000, DB_URL = 'mongodb://localhost:27017/bitfilmsdb' } = process.env;
 
+const corsOptions = {
+  origin: 'https://film-curator.nomoredomains.club',
+  optionsSuccessStatus: 200,
+};
+
 const auth = require('./middlewares/auth');
 
 const app = express();
@@ -35,9 +40,7 @@ mongoose.connect(DB_URL, {
 });
 
 app.use(requestLogger);
-app.use(cors({
-  origin: 'https://film-curator.nomoredomains.club',
-}));
+app.use(cors(corsOptions));
 app.use(limiter);
 app.use(helmet());
 
